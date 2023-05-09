@@ -1,9 +1,6 @@
 package com.example.practice;
 
-import com.example.practice.controllers.ConstructorInjectedController;
-import com.example.practice.controllers.MyController;
-import com.example.practice.controllers.PropertyInjectedController;
-import com.example.practice.controllers.SetterInjectedController;
+import com.example.practice.controllers.*;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -16,7 +13,8 @@ public class PracticeApplication {
 		ApplicationContext ctx = SpringApplication.run(PracticeApplication.class, args);
 		MyController myController = (MyController) ctx.getBean("myController");
 
-
+		I18nController i18nController = (I18nController) ctx.getBean("i18nController");
+		System.out.println(i18nController.sayHello());
 
 		System.out.println(myController.sayHello());
 		System.out.println("-----------Property");
