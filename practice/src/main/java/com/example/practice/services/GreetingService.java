@@ -1,5 +1,8 @@
 package com.example.practice.services;
 
-public interface GreetingService {
+import org.springframework.stereotype.Service;
+
+
+public interface GreetingService{
     String sayGreeting();
 }
